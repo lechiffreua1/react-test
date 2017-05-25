@@ -8,7 +8,6 @@ class AppComponent extends React.Component {
     render() {
         let name = 'Dima';
         let age = 22;
-        let hobbies = ['Sport', 'IT-learning'];
         return (
             <div className="container">
                 <div className="row">
@@ -18,9 +17,7 @@ class AppComponent extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-10">
-                        <Home name={name} age={age} hobbies={hobbies}>
-                            <p>This is the paragraph</p>
-                        </Home>
+                        <Home name={name} age={age}/>
                     </div>
                 </div>
             </div>
