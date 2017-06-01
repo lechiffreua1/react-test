@@ -2,25 +2,24 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import { Home } from './components/Home';
-import { Header } from './components/Header';
+import { User } from './components/User';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class AppComponent extends React.Component {
+
     render() {
-        let name = 'Dima';
-        let age = 22;
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-10">
-                        <Header/>
-                    </div>
+            <Router>
+                <div>
+                    <ul>
+                        <li><Link to="/">User</Link></li>
+                        <li><Link to="/home">Home</Link></li>
+                    </ul>
+                    <hr/>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="user" component={User}/>
                 </div>
-                <div className="row">
-                    <div className="col-xs-10">
-                        <Home name={name} age={age}/>
-                    </div>
-                </div>
-            </div>
+            </Router>
         );
     }
 }
