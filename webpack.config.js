@@ -22,6 +22,11 @@ var config = {
                 }
             }
         ]
+    },
+    devServer: {
+        historyApiFallback:{
+            index:'dist/index.html'
+        },
     }
 };
 

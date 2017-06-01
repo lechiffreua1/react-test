@@ -12,12 +12,12 @@ class AppComponent extends React.Component {
             <Router>
                 <div>
                     <ul>
-                        <li><Link to="/">User</Link></li>
+                        <li><Link to="/user">User</Link></li>
                         <li><Link to="/home">Home</Link></li>
                     </ul>
                     <hr/>
-                    <Route exact path="/" component={Home}/>
                     <Route path="user" component={User}/>
+                    <Route path="home" component={Home}/>
                 </div>
             </Router>
         );
